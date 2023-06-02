@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
     const formulario = document.querySelector('#formulario');
-    const btnSubmit = document.querySelector('#formulario button[type="submit"]');
+    const btnEnviar = document.querySelector('#formulario button[type="submit"]');
     const btnReset = document.querySelector('#formulario button[type="reset"]');
     const spinner = document.querySelector('#spinner');
 
@@ -104,12 +104,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function comprobarEmail() {
         if(Object.values(email).includes('')) {
-            btnSubmit.classList.add('opacity-50');
-            btnSubmit.disabled = true;
+            btnEnviar.classList.add('opacity-50');
+            btnEnviar.disabled = true;
             return
         } 
-        btnSubmit.classList.remove('opacity-50');
-        btnSubmit.disabled = false;
+        btnEnviar.classList.remove('opacity-50');
+        btnEnviar.disabled = false;
     }
 
     function resetFormulario() {
