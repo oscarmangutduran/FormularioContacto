@@ -1,13 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     const email = {
+        nombre: '',
+        apellidos: '',
         email: '',
+        destinatario: '',
         asunto: '',
         mensaje: ''
     }
 
     // Seleccionar los elementos de la interfaz
+    const inputNombre = document.querySelector('#nombre');
+    const inputApellidos = document.querySelector('#apellidos');
     const inputEmail = document.querySelector('#email');
+    const inputDestinatario = document.querySelector('#destinatario');
     const inputAsunto = document.querySelector('#asunto');
     const inputMensaje = document.querySelector('#mensaje');
     const formulario = document.querySelector('#formulario');
@@ -16,7 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const spinner = document.querySelector('#spinner');
 
     // Asignar eventos
+    inputNombre.addEventListener('input', validar);
+    inputApellidos.addEventListener('input', validar);
+
     inputEmail.addEventListener('input', validar);
+    inputDestinatario.addEventListener('input', validar);
+
     inputAsunto.addEventListener('input', validar);
     inputMensaje.addEventListener('input', validar);
 
